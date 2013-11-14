@@ -11,8 +11,3 @@ install:
 
 script:  
   py.test
-
-notifications:
-  email:
-    recipients:
-      - charlie.clark@clark-consulting.eu
