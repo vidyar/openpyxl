@@ -4,10 +4,11 @@ python:
   - "2.7"
   - "3.2"
   - "3.3"
-# command to run tests
-before_script:  mkdir -p shippable/codecoverage  shippable/testresults
-script:  
-  - py.test --cov-report xml --cov openpyxl --resultlog=shippable/testresults
 install:
-  - pip install lxml pytest nose
+  pip install lxml pytest nose pytest-cov
 
+before_script:
+  mkdir -p shippable/codecoverage
+
+script:  
+  py.test --cov-report xml --cov openpyxl --resultlog=shippable/testresults
