@@ -6,8 +6,7 @@ python:
   - "3.3"
 # command to run tests
 before_script:
-  mkdir -p shippable/codecoverage
-  mkdir -p shippable/testresults
+  mkdir -p shippable/codecoverage  shippable/testresults
   
 
 script:  
