@@ -11,4 +11,6 @@ before_script:
   mkdir -p shippable/codecoverage
 
 script:  
-  py.test --cov-report xml --cov openpyxl --resultlog=shippable/testresults
+ 
+  - coverage run py.test
+  - coverage xml -o shippable/codecoverage/coverage.xml p
