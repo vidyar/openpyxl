@@ -5,8 +5,7 @@ python:
   - "3.2"
   - "3.3"
 # command to run tests
-before_script:
-  mkdir -p shippable/codecoverage  shippable/testresults
+before_script:  mkdir -p shippable/codecoverage  shippable/testresults
   
 
 script:  
@@ -14,5 +13,3 @@ script:
 install:
   pip install lxml pytest nose
 
-script:  
-  py.test
