@@ -5,7 +5,7 @@ python:
   - "3.2"
   - "3.3"
 install:
-  pip install lxml pytest nose pytest-cov -r requirements.txt
+  pip install lxml pytest nose pytest-cov 
 
 before_script:
   mkdir -p shippable/codecoverage shippable/testresults
