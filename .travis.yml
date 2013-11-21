@@ -13,5 +13,5 @@ before_script:
 script:  
  
   - coverage run py.test
-  - coverage xml -o shippable/codecoverage/coverage.xml p
+  - coverage xml -o shippable/codecoverage/coverage.xml 
   - nosetests openpyxl/openpyxl/cell.py  --with-xunit --xunit-file=shippable/testresults/nosetests.xml
