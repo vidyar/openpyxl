@@ -10,8 +10,5 @@ install:
 before_script:
   mkdir -p shippable/codecoverage shippable/testresults
 
-script:  
- 
-  - coverage run py.test
-  - coverage xml -o shippable/codecoverage/coverage.xml 
-  - nosetests openpyxl/openpyxl/cell.py  --with-xunit --xunit-file=shippable/testresults/nosetests.xml
+script:
+  py.test --cov-report xml --cov openpyxl --junit-xml=shippable/testresults/results.xml
