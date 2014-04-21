@@ -64,7 +64,7 @@ class TestDrawing(object):
         d.resize_proportional = True
         d.width = 100
         d.height = 50
-        assert (d.width, d.height) == (5, 50)
+        assert (d.width, d.height) == (5, 500)
 
     def test_height(self):
         d = self.drawing
