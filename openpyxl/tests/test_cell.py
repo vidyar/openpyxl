@@ -171,7 +171,7 @@ class TestCellValueTypes(object):
 
 def test_data_type_check():
     ws = build_dummy_worksheet()
-    cell = Cell(ws, 'A', 1)
+    cell = Cell(ws, 'A', 3)
     cell.bind_value(None)
     eq_(Cell.TYPE_NULL, cell._data_type)
 
