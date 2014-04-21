@@ -85,7 +85,7 @@ def test_write_workbook():
 
 
 def test_write_string_table():
-    table = {'hello': 1, 'world': 2, 'nice': 3}
+    table = {'hello': 1, 'wor': 2, 'nice': 3}
     content = write_string_table(table)
     reference_file = os.path.join(DATADIR, 'writer', 'expected', 'sharedStrings.xml')
     with open(reference_file) as expected:
