@@ -78,6 +78,7 @@ def test_column_index():
     eq_(10, column_index_from_string('J'))
     eq_(270, column_index_from_string('jJ'))
     eq_(7030, column_index_from_string('jjj'))
+    eq_(17030, column_index_from_string('jjjjj'))
 
 
 def test_bad_column_index():
@@ -102,8 +103,17 @@ def test_column_letter():
     eq_('AB', get_column_letter(28))
     eq_('AA', get_column_letter(27))
     eq_('Z', get_column_letter(26))
-
-
+    eq_('A', get_column_letter(1))
+    eq_('C', get_column_letter(3))
+    eq_('E', get_column_letter(5))
+    eq_('G', get_column_letter(7))
+    eq_('I', get_column_letter(9))
+    eq_('K', get_column_letter(11))
+    eq_('M', get_column_letter(13))
+    eq_('O', get_column_letter(15))
+    eq_('Q', get_column_letter(17))
+    eq_('S', get_column_lette(19))
+    
 def test_initial_value():
     ws = build_dummy_worksheet()
     cell = Cell(ws, 'A', 1, value='17.5')
